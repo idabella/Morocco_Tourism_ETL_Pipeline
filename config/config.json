@@ -1,0 +1,26 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5433,
+    "database": "morocco_tourism",
+    "user": "postgres",
+    "password": "your_postgres_password"
+  },
+  "paths": {
+    "raw_data": "data/raw/",
+    "processed_data": "data/processed/"
+  },
+  "etl": {
+    "batch_size": 1000,
+    "max_retries": 3
+  },
+  "data_quality": {
+    "min_year": 2010,
+    "max_year": 2025,
+    "required_columns": {
+      "arrivees": ["annee", "arrivees"],
+      "nuitees": ["annee", "nuitees"],
+      "recettes": ["annee", "recettes"]
+    }
+  }
+}
